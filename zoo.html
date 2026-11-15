@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+                background-color: aliceblue;
+                padding: 30px;
+                text-align: center;
+            }
+            h1{
+                color: brown;
+            }
+            #zoo{
+                border: 2px solid red;
+                width: 300px;
+                margin: 16px auto;
+                padding: 12px;
+                border-radius: 12px;
+                background: white;
+            }
+            .zone{
+                border: 1px solid rebeccapurple;
+                margin: 6px 0;
+                padding: 10px 24px;
+                text-align: left;
+                border-radius: 6px;
+            }
+            button{
+                background-color: aqua;
+                color: white;
+                padding: 10px 24px;
+                border: none;
+                border-radius: 20px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>My Zoo Page</h1>
+        <p> Use Javascript and dom to add animals in each cage!</p>
+        <div id="zoo"> 
+            <div class="zone">Zone1: <span id="zone1"></span></div>
+            <div class="zone">Zone2: <span id="zone2"></span></div>
+            <div class="zone">Zone3: <span id="zone3"></span></div>
+            <div class="zone">total animals: <span id="total"></span></div>
+            <br>
+            <button onclick="OpenZoo()">Open The Zoo!</button>
+            <p id="zoo-status"></p>
+        </div>
+        <script>
+            function OpenZoo(){
+                document.getElementById("zone1").innerHTML=" Lion,Tiger";
+                document.getElementById("zone2").innerHTML=" Elephent";
+                document.getElementById("zone3").innerHTML=" Penguin";
+                document.getElementById("zoo").style.backgroundColor="lightgreen";
+                document.getElementById("zoo-status").innerHTML= document.title+"is now open!";
+            }
+        </script>
+    </body>
+</html>
